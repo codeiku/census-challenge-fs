@@ -12,7 +12,7 @@ It creates realistic-looking demographic data including age, employment, educati
 It does not aim for anything else but to recreate a similar dataset, nor does it account for valid distributions in the data. 
 
 Usage:
-   python create_db.py  # Creates us-census.db with 1000001 rows by default
+   python create_db.py  # Creates us-census.db with 1000 rows by default
    
    # Or from another script:
    from create_db import create_census_database
@@ -25,6 +25,8 @@ Dependencies:
 
 Many thanks to Claude for your help.
 """
+
+target_rows = 1000
 
 
 def create_census_database(num_rows, output_file="us-census.db"):
@@ -187,5 +189,5 @@ def create_census_database(num_rows, output_file="us-census.db"):
 
 
 if __name__ == "__main__":
-    # Create database with 1000001 rows
-    create_census_database(1000001)
+    # Create database with target_rows # rows
+    create_census_database(target_rows)

@@ -6,7 +6,7 @@
 The best code runs forever, right? So did our great little Census app. It was written in NodeJS as an internal API but now we want to ship it to users that aren't developers.
 
 ## The app
-You will find a NodeJS server app in [/resources/census-server-dataiku.zip](https://github.com/dataiku/census-challenge/blob/main/resources/census-server-dataiku.zip?raw=true)
+You will find a NodeJS server app in `/resources/census-server-dataiku`
 
 The server runs against a SQLite database containing demographical record data that does not exist, yet. Install the dependencies and `create_db.py` to generate your data (make sure to put in the right path after you create it). 
 
