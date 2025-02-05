@@ -1,0 +1,13 @@
+{
+  "name": "census-app-dataiku",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^4.0.9"
+  },
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "devDependencies": {}
+}
