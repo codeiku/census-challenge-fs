@@ -8,7 +8,7 @@ The best code runs forever, right? So did our great little Census app. It was wr
 ## The app
 You will find a NodeJS server app in `/resources/census-server-dataiku`
 
-The server runs against a SQLite database containing demographical record data that does not exist, yet. Install the dependencies and `create_db.py` to generate your data (make sure to put it in the right path after you create it). 
+The server runs against a SQLite database containing demographical record data that does not exist, yet. Install the dependencies and `create_db.py` to generate your data (make sure to put it in the right path after you create it). Installation instructions are at the bottom of this readme. 
 
 The Node app provides an example REST API with 2 endpoints. 
 
@@ -72,4 +72,35 @@ Also consider this:
 # Final note
 Apart from swapping the API for a Python back-end, there are no constraints on the tech choices you can make. For instance, it is fine to allow yourself a little tailwind by utilising a CSS framework. Choose the tech you feel comfortable in and consider fit for the task, as long as it helps us to understand your level and approach to crafting great user experiences! Deliver this test as an application our average Dataiker can install, test and run locally with your provided documentation. 
 
-And, perhaps most importantly, make sure to have fun!
+## Installation
+
+### Set up your env
+We recommend to start off fresh with a new virtual environment (using venv here):
+
+`python3 -m venv .venv` #tested with Python 3.13.*
+
+Activate it:
+`source .venv/bin/activate`
+
+From the resources folder, you can then
+
+Install Python dependencies:
+
+`pip install -r requirements.txt `
+
+Create your test data (you can fiddle with the number of target rows in the file if you want, for instance to start off with a small db and iterate quickly first):
+
+`python create_db.py`
+
+### Node API 
+To run the Node app, cd into the folder and 
+
+```sh
+npm install
+npm run start
+```
+
+Open your browser and checkout the following URLs
+
+* http://localhost:4000/api/columns
+* http://localhost:4000/api/data/dividends
